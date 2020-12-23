@@ -1,0 +1,6 @@
+rootProject.name = 'loja-michele'
+
+include(
+        "frontend",
+        "backend"
+)
