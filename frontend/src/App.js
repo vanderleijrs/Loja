@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-
+import Home from './Home/Home'
 
 function App() {
   const headerProps = {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <main className="App-content">
-
+        <Home/>
       </main>
     </div>
   );

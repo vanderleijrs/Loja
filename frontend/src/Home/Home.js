@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from 'react-bootstrap'
-import CardComponent from '../components/Card/CardComponent';
+import CardComponent from '../components/Card/Card';
 export default function Home() {
    {/* const json;*/}
         return (
