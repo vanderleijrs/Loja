@@ -16,5 +16,11 @@ public class Compra {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private int id;
+    private String data;
     private String descricao;
+    private double valorUnitario;
+    private int quantidade;
+    @ManyToOne
+    @JoinColumn(name="id")
+    private Cliente cliente;
 }

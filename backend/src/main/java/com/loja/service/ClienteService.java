@@ -18,8 +18,6 @@ public class ClienteService {
         this.clienteConverterService = clienteConverter;
     }
 
-
-
     public Cliente create(ClienteRequest clienteRequest) {
         Cliente  cliente= clienteConverterService.converter(clienteRequest);
         return clienteRepository.save(cliente);
