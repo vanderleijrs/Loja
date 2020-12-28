@@ -5,17 +5,16 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "residue_address")
+@Table(name = "compra")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class ResidueAddress {
+public class Compra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private Integer id;
-    private String cep;
-    private String locationInfo;
+    private int id;
+    private String descricao;
 }

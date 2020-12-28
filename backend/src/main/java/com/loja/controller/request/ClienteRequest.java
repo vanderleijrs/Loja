@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResidueAddressRequest {
-    private String cep;
-    private String locationInfo;
+public class ClienteRequest {
+    private String name;
 }
