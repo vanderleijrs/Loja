@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <main className="App-content">
         <Home/>
+      
       </main>
     </div>
   );

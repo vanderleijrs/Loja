@@ -8,7 +8,7 @@ function NavbarComponent(){
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="#cadastroUsuario">Cadastro Cliente</Nav.Link>
+                <Nav.Link href="#cadastroCompra">Cadastro Cliente</Nav.Link>
                 <Nav.Link href="#Table">Clientes</Nav.Link>
                 <Nav.Link href="#Compra">Compra</Nav.Link>
             </Nav>

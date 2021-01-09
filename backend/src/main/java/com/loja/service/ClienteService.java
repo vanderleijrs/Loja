@@ -2,6 +2,7 @@ package com.loja.service;
 
 import com.loja.controller.request.ClienteRequest;
 import com.loja.entity.Cliente;
+import com.loja.entity.Compra;
 import com.loja.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
@@ -26,7 +27,7 @@ public class ClienteService {
     public Optional<Cliente> getCliente(int codigo) {
         return clienteRepository.findById(codigo);
     }
-
-    }
+   
+}
 
 

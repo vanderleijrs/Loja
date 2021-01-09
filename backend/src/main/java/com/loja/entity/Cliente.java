@@ -14,8 +14,10 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    private int id;
+    private Integer id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "cliente")
     private List<Compra> compra;
+    @OneToMany(mappedBy = "cliente")
+    private List<Pagamento> pagamento;
 }
