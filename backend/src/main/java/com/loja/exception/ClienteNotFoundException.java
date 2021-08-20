@@ -6,7 +6,6 @@ public class ClienteNotFoundException extends RuntimeException {
     public ClienteNotFoundException(int id) {
         this.id = id;
     }
-
     @Override
     public String getMessage() {
         return String.format("Cliente não encontrado");

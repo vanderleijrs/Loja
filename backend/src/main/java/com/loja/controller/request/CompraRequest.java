@@ -6,16 +6,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class CompraRequest {
-    private String data;
+    private Cliente cliente;
     private String descricao;
+    private String dataCompra;
     private double valorUnitario;
     private int quantidade;
     private double valorTotal;
-    private Cliente cliente;
 }

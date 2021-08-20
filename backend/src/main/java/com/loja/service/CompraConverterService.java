@@ -6,9 +6,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CompraConverterService {
-    public Compra converter(CompraRequest compra) {
-        return Compra.builder().descricao(compra.getDescricao()).data(compra.getData())
-                .valorUnitario(compra.getValorUnitario()).quantidade(compra.getQuantidade())
-                .valorTotal(compra.getValorTotal()).cliente(compra.getCliente()).build();
+    public Compra converter(CompraRequest compraRequest) {
+        return Compra.builder()
+                .cliente(compraRequest.getCliente())
+                .descricao(compraRequest.getDescricao())
+                .dataCompra(compraRequest.getDataCompra())
+                .valorUnitario(compraRequest.getValorUnitario())
+                .quantidade(compraRequest.getQuantidade())
+                .valorTotal(compraRequest.getValorUnitario() * compraRequest.getQuantidade())
+                .build();
     }
 }

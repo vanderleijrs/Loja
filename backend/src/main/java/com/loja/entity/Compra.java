@@ -1,8 +1,11 @@
 package com.loja.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "compra")
@@ -14,14 +17,14 @@ import javax.persistence.*;
 public class Compra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private Integer id;
-    private String data;
+    private int idCompra;
     private String descricao;
+    private String dataCompra;
     private double valorUnitario;
     private int quantidade;
-    private double valorTotal= valorUnitario * quantidade; 
-    @ManyToOne
-    @JoinColumn(name="cliente_id")
-    private Cliente cliente;
+    private double valorTotal;
+   @ManyToOne(fetch = FetchType.LAZY, targetEntity = Cliente.class)
+   @JsonBackReference(value = "id_compra")
+   @JoinColumn(name = "id_cliente")
+   private Cliente cliente;
 }

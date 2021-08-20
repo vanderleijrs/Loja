@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ClienteConverterService {
-    public Cliente converter(ClienteRequest cliente) {
-        return Cliente.builder().name(cliente.getName()).build();
+    public Cliente converter(ClienteRequest clienteRequest) {
+        return Cliente.builder()
+                .nome(clienteRequest.getNome())
+                .pagamento(clienteRequest.getPagamento())
+                .compra(clienteRequest.getCompra())
+                .build();
     }
 }
